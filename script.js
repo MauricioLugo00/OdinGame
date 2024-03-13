@@ -45,7 +45,7 @@ container.appendChild(resultContador);
 
 resultado.style.color = "#7b7bff";
 resultado.style.fontSize = "1.5em";
-resultado.style.margin = ".5em";
+resultado.style.margin = "1em";
 resultado.style.fontWeight = "bold";
 
 resultContador.style.fontSize = "2em";
