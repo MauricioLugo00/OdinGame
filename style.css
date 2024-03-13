@@ -1,69 +1,96 @@
-*{
+
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     display: flex;
-    flex-flow: column wrap;
-    box-sizing: border-box;
-    background-color: rgb(81, 19, 107);
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    flex-flow: column nowrap;
+    background-color: rgb(51, 7, 18);
     color: white;
+    font-family: Ubuntu, sans-serif;
+    align-items: center;
+    margin: 0;
 }
 
 header {
-    box-sizing: border-box;
-    background-color: rgb(44, 1, 44);
-    padding: 1em;
+    font-size: 2vw; 
     text-align: center;
-    border-radius: 1em;
+    width: 100%;
+    background-color: rgb(117, 41, 60);
+    padding: 25px 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 50em; 
+    font-size: 1rem;
+    text-align: center;
+    background-color: rgb(69 13 27);
+    padding: 20px;
+    margin-top: 20px; 
+    box-sizing: border-box;
+    border-radius: 2em;
+}
+
+/*Agregar estilos a elementos*/
+
+#titulo {
+    color: rgb(128 187 255);
+    margin: .2em;
+    padding: .2em;
+    border-bottom: 1px solid rgb(70 102 139);
+}
+
+#by {
+    font-size: .8em;
+}
+
+#ganador, #contador{
+    color: rgb(255 221 137);
+    color: lightgreen;
+}
+
+button {
+    box-sizing: border-box;
+    text-align: center;
+    padding: .3em 1em;
+    background-color: rgb(172, 172, 255);
+    border-radius: .6em;
+    border-color: rgb(17, 17, 51);
+    box-shadow: 2px 2px 2px 2px rgba(255, 255, 255, 0.3);
+    color: rgb(99, 26, 50);
+    font-size: 2em;
+}
+
+form {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.contador {
+    background-color: rgb(99, 6, 60);
+    margin: 1em;
     width: 50em;
-    margin: 1em auto;
+    border-radius: 2em;
 }
 
-.content {
-    box-sizing: border-box;
-    background-color: rgb(20, 17, 17);
+.contador p {
+    margin: .5em .5em;
     text-align: center;
-    width: 40em;
-    height: 25em;
-    margin: 1em auto;
-    padding: 2em;  
+    font-size: 2.5em;
+    font-weight: bolder;   
 }
 
-h2 {
-    margin: 0 auto;
+#playerWins {
+    color: greenyellow;
 }
 
-#contButtons {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    box-sizing: border-box;
-    margin: 1em auto;
-
+#computerWins {
+    color: red;
 }
 
-#contButtons button {
-    box-sizing: border-box;
-    padding: .5em 2em;
-    font-weight: 800;
-    font-size: large;
-}
-
-.images{
-    box-sizing: border-box;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-}
-
-.images img {
-    box-sizing: border-box;
-    width: 10em;
-    height: 8em;
-    border: .3em solid red;
-    border-radius: 1em;
-    margin: 0 auto;
-}
