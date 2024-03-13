@@ -31,25 +31,25 @@ function playRound(playerSelection, computerSelection) {
         return "You lose! " + computerChoice + " beats " + playerChoice + ".";
     }
 }
+
 const container = document.querySelector(".container");
 const rocks = document.getElementById("rocks");
 const paper = document.getElementById("paper");
 const scissors = document.getElementById("scissors");
 const resultado = document.createElement("div");
 const contador = document.createElement("p");
-const resultContador = document.createElement("p")
+const resultContador = document.createElement("p");
 
 container.appendChild(resultado);
 container.appendChild(resultContador);
 
 resultado.style.color = "#7b7bff";
 resultado.style.fontSize = "1.5em";
-resultado.style.margin = "1em";
-resultado.style.fontWeight = "bold"
+resultado.style.margin = ".5em";
+resultado.style.fontWeight = "bold";
 
-resultContador.style.fontSize = "2em"
-resultContador.style.fontWeight = "bolder"
-
+resultContador.style.fontSize = "2em";
+resultContador.style.fontWeight = "bolder";
 
 let contValue = 0;
 let playerScore = 0;
@@ -73,7 +73,7 @@ function updateScore(roundResult) {
 
 function Winner() {
     let message;
-    if(playerScore > computerScore) {
+    if (playerScore > computerScore) {
         message = "YOU WIN!!";
         resultContador.style.color = "greenyellow";
     } else if (computerScore > playerScore) {
@@ -82,14 +82,13 @@ function Winner() {
     } else {
         message = "IT'S A F***ING TIE!!";
         resultContador.style.color = "lightgreen";
-    } 
+    }
     resultContador.textContent = message;
-    
-    if (contValue === 5) {
+
+    if (playerScore + computerScore === 5) {
         reloadButton.style.display = "block";
     }
 }
-
 
 rocks.addEventListener('click', () => {
     if (contValue < 5 ) {
@@ -100,13 +99,12 @@ rocks.addEventListener('click', () => {
         resultado.textContent = roundResult;  
         updateScore(roundResult);
         if (contValue === 5) {
-            resultContador.textContent = Winner();
+            Winner();
         }
     }
 });
 
 paper.addEventListener('click', () => {
-
     if (contValue < 5 ) {
         contValue++;
         const playerSelection = paper.textContent;
@@ -115,13 +113,12 @@ paper.addEventListener('click', () => {
         resultado.textContent = roundResult;
         updateScore(roundResult);
         if (contValue === 5) {
-            resultContador.textContent = Winner();
-        }  
-    }  
-})
+            Winner();
+        }
+    }
+});
 
 scissors.addEventListener('click', () => {
-
     if (contValue < 5 ) {
         contValue++;
         const playerSelection = scissors.textContent;
@@ -130,14 +127,7 @@ scissors.addEventListener('click', () => {
         resultado.textContent = roundResult;  
         updateScore(roundResult);
         if (contValue === 5) {
-            resultContador.textContent = Winner();
+            Winner();
         }
-    }   
-})
-
-
-
-
-
-
-
+    }
+});
