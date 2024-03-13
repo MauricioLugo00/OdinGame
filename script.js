@@ -1,4 +1,4 @@
-function playGame() {
+/*function playGame() {
 
     let getComputerChoice = (computerSelection, playerSelection) => {
 
@@ -47,7 +47,9 @@ function playGame() {
 }
 
 console.log(playGame(playGame(playGame(playGame(playGame())))))
+*/
 
+const 
 
 
 
