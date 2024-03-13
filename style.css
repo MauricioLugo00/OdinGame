@@ -24,8 +24,7 @@ header {
 }
 
 .container {
-    width: 90%; 
-    max-width: 50em; 
+    width: 50em; 
     font-size: 1rem;
     text-align: center;
     background-color: rgb(69 13 27);
@@ -45,13 +44,51 @@ header {
 }
 
 #by {
-    font-size: .5em;
+    font-size: .8em;
 }
 
 #ganador, #contador{
     color: rgb(255 221 137);
+    color: lightgreen;
 }
 
 button {
-    
+    box-sizing: border-box;
+    text-align: center;
+    padding: .3em 1em;
+    background-color: rgb(172, 172, 255);
+    border-radius: .6em;
+    border-color: rgb(17, 17, 51);
+    box-shadow: 2px 2px 2px 2px rgba(255, 255, 255, 0.3);
+    color: rgb(99, 26, 50);
+    font-size: 2em;
+}
+
+form {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.contador {
+    background-color: rgb(99, 6, 60);
+    margin: 1em;
+    width: 50em;
+    border-radius: 2em;
+}
+
+.contador p {
+    margin: .5em .5em;
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: bolder;   
+}
+
+#playerWins {
+    color: greenyellow;
+}
+
+#computerWins {
+    color: red;
 }
