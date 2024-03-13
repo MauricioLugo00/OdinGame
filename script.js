@@ -45,7 +45,7 @@ container.appendChild(resultContador);
 
 resultado.style.color = "#7b7bff";
 resultado.style.fontSize = "1.5em";
-resultado.style.margin = "1em";
+resultado.style.margin = ".8em";
 resultado.style.fontWeight = "bold";
 
 resultContador.style.fontSize = "2em";
@@ -100,6 +100,7 @@ rocks.addEventListener('click', () => {
         updateScore(roundResult);
         if (contValue === 5) {
             Winner();
+            reloadButton.style.display = "block"; // Mueve esta línea aquí
         }
     }
 });
@@ -114,6 +115,7 @@ paper.addEventListener('click', () => {
         updateScore(roundResult);
         if (contValue === 5) {
             Winner();
+            reloadButton.style.display = "block"; // Mueve esta línea aquí
         }
     }
 });
@@ -128,6 +130,10 @@ scissors.addEventListener('click', () => {
         updateScore(roundResult);
         if (contValue === 5) {
             Winner();
+            reloadButton.style.display = "block"; // Mueve esta línea aquí
         }
     }
 });
+
+
+//FINISHED
